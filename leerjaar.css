@@ -303,3 +303,23 @@
 .back-home:hover {
     text-decoration: underline;
 }
+
+.project-section figure {
+    margin: 1rem 0;
+    max-width: 100%;
+}
+
+.project-section figure img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-section figure figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
