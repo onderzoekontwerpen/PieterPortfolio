@@ -14,7 +14,7 @@ body {
 }
 
 .leerjaar-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -33,6 +33,9 @@ body {
     animation: fadeIn 0.5s ease-out;
     padding: 2rem;
     margin-bottom: 2rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-title {
@@ -241,10 +244,11 @@ body {
 
 .project-section {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
-    margin: 2rem 0;
+    margin: 2rem auto;
     box-shadow: var(--card-shadow);
+    max-width: 1000px;
 }
 
 .project-section:hover {
@@ -402,4 +406,12 @@ h1, h2, h3 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
+}
+
+/* Voor betere leesbaarheid op brede schermen */
+p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
 }
