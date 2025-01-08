@@ -136,3 +136,142 @@ footer {
 .header-button:hover {
     background-color: #555;
 } 
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #6366f1, #3b82f6);
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: #f8fafc;
+}
+
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-title {
+    font-size: 3.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideUp 0.8s ease-out;
+}
+
+.animate-text {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.portfolio-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+}
+
+.carousel-container {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    overflow: hidden;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.carousel-container.left {
+    left: 0;
+}
+
+.carousel-container.right {
+    right: 0;
+}
+
+.carousel-track {
+    display: flex;
+    flex-direction: column;
+    animation: scrollCarousel 20s linear infinite;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0.5rem 0;
+}
+
+@keyframes scrollCarousel {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 
