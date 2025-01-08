@@ -79,5 +79,25 @@
     <footer>
         <img src="images/mosquito-alert.png" alt="Mosquito Alert" class="footer-logo">
     </footer>
+
+    <script>
+        function createDots() {
+            const background = document.createElement('div');
+            background.className = 'animated-background';
+            document.body.appendChild(background);
+    
+            for (let i = 0; i < 50; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                dot.style.left = `${Math.random() * 100}%`;
+                dot.style.width = `${Math.random() * 20 + 5}px`;
+                dot.style.height = dot.style.width;
+                dot.style.animationDelay = `${Math.random() * 20}s`;
+                background.appendChild(dot);
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', createDots);
+        </script>
 </body>
 </html> 
