@@ -268,9 +268,19 @@
     margin: 0;
 }
 
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .photo-gallery figcaption {
     text-align: center;
     margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .video-container {
