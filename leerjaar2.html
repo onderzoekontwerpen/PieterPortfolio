@@ -6,8 +6,10 @@
     <title>Leerjaar 2 - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="leerjaar.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div>
     <header class="header-banner">
         <div class="header-left">
             <a href="index.html">
@@ -77,7 +79,7 @@
 
                 <div class="download-section">
                     <h3>Klik hier onder voor het bestand</h3>
-                    <a href="downloads/portfolie-project-1.pdf" class="download-button">Download</a>
+                    <a href="Downloads/portofolie-project-1-jaarlaag-2-2023-2024-4.pdf" class="download-button">Download</a>
                 </div>
             </div>
         </article>
@@ -96,23 +98,53 @@
     </footer>
 
     <script>
-    function createDots() {
-        const background = document.createElement('div');
-        background.className = 'animated-background';
-        document.body.appendChild(background);
-
-        for (let i = 0; i < 50; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'dot';
-            dot.style.left = `${Math.random() * 100}%`;
-            dot.style.width = `${Math.random() * 20 + 5}px`;
-            dot.style.height = dot.style.width;
-            dot.style.animationDelay = `${Math.random() * 20}s`;
-            background.appendChild(dot);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', createDots);
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: '#3b82f6' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#3b82f6',
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+            }
+        },
+        interactivity: {
+            detect_on: 'window',
+            events: {
+                onhover: { 
+                    enable: true, 
+                    mode: 'repulse'
+                },
+                onclick: { 
+                    enable: true, 
+                    mode: 'push'
+                },
+                resize: true
+            },
+            modes: {
+                repulse: { 
+                    distance: 100,
+                    duration: 0.4
+                },
+                push: { particles_nb: 4 }
+            }
+        },
+        retina_detect: true
+    });
     </script>
 </body>
 </html> 
